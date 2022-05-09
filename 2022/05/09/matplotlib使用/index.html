@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Luo zerone">
+    
+    <title>
+        
+            Matplotlib教程 |
+        
+        Fly your mind-随风而行
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/icon.ico">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"zer-one.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/icon.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Zeal without knowledge is fire without light"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Fly your mind-随风而行
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Matplotlib教程</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Luo zerone</span>
+                        
+                            <span class="author-label">Engineer</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-05-09 22:32:23</span>
+        <span class="mobile">2022-05-09 22:32</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Matplotlib/">Matplotlib</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.3k 字</span>
+        </span>
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <center style="font-size:40px;font-weight:bold">Matplotlib</center>
+
+<hr>
+<p>matplolib的三层结构：</p>
+<ul>
+<li><p>容器层</p>
+<ul>
+<li><p>Canvas层</p>
+</li>
+<li><p>画布层(Figure)</p>
+</li>
+<li><p>绘图区(Axes)</p>
+</li>
+</ul>
+</li>
+<li><p>辅助显示层</p>
+<ul>
+<li><p>标题</p>
+</li>
+<li><p>图线的描述信息</p>
+</li>
+<li><p>x的刻度</p>
+</li>
+<li><p>网格</p>
+</li>
+</ul>
+</li>
+<li><p>图像层</p>
+<ul>
+<li>折线图</li>
+<li>柱状图</li>
+</ul>
+</li>
+</ul>
+<p><code>容器层可以接触到的只是绘图区，其他的都在底层，辅助显示层其实就是函数图像之外的辅助的图例，像标题，刻度之类的，而图像层就是函数图像</code></p>
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211029211459445.png" alt="image-20211029211459445"></p>
+<hr>
+<h2 id="图像绘制的基本步骤"><a href="#图像绘制的基本步骤" class="headerlink" title="图像绘制的基本步骤"></a>图像绘制的基本步骤</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.引用库</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt    </span><br><span class="line"><span class="comment"># 2.准备数据</span></span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">y = [<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="comment"># 3.创建画布</span></span><br><span class="line">plt.figure(figsize=(<span class="number">20</span>,<span class="number">8</span>),dpi=<span class="number">80</span>)   <span class="comment"># 设置画布属性，figure：画布大小，单位是英寸 </span></span><br><span class="line"><span class="comment"># 4.绘制图像</span></span><br><span class="line">plt.plot(x,y)               </span><br><span class="line"><span class="comment"># 5.显示图像</span></span><br><span class="line">plt.show()    						<span class="comment"># 使用show方法后，会释放figure画布</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211029213211713.png" alt="image-20211029213211713"></p>
+<hr>
+<h2 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h2><h4 id="图像的辅助信息"><a href="#图像的辅助信息" class="headerlink" title="图像的辅助信息"></a>图像的辅助信息</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 准备数据</span></span><br><span class="line">time = <span class="built_in">range</span>(<span class="number">60</span>)</span><br><span class="line">temp = [np.random.uniform(<span class="number">10</span>,<span class="number">20</span>) <span class="keyword">for</span> i <span class="keyword">in</span> time]  <span class="comment"># 列表生成式</span></span><br><span class="line"><span class="comment"># 等价于：temp = [20 + 10 * np.random.rand(20,30) for i in time]</span></span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">20</span>,<span class="number">8</span>))     <span class="comment"># figsize:画布大小单位是英寸</span></span><br><span class="line"></span><br><span class="line">x_label = [<span class="string">&quot;11 hours:&#123;&#125; secd&quot;</span>.<span class="built_in">format</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> time]</span><br><span class="line">plt.xticks(time[::<span class="number">5</span>],x_label[::<span class="number">5</span>])        <span class="comment"># 前面是修改刻度，后面刻度的是名称</span></span><br><span class="line">plt.yticks(<span class="built_in">range</span>(<span class="number">0</span>,<span class="number">40</span>,<span class="number">5</span>))              <span class="comment"># 修改y轴的刻度</span></span><br><span class="line">plt.xlabel(<span class="string">&quot;时间&quot;</span>)                     <span class="comment"># 设置y轴的名称</span></span><br><span class="line">plt.ylabel(<span class="string">&quot;温度&quot;</span>)                     <span class="comment"># 设置y轴的名称</span></span><br><span class="line">plt.title(<span class="string">&quot;温度变化图&quot;</span>)                 <span class="comment"># 设置大标题</span></span><br><span class="line">plt.grid(linestyle=<span class="string">&quot;-&quot;</span>,alpha=<span class="number">0.9</span>)        <span class="comment"># 设置网格 linestyle:网格风格  alpha：透明度</span></span><br><span class="line"></span><br><span class="line">plt.plot(time,temp,label=<span class="string">&quot;function&quot;</span>,color=<span class="string">&quot;red&quot;</span>,marker=<span class="string">&quot;x&quot;</span>,linewidth=<span class="string">&quot;5&quot;</span>)    <span class="comment"># 设置曲线的颜色和名称,点的形状</span></span><br><span class="line">plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">10</span>],[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">10</span>],<span class="string">&#x27;gx-&#x27;</span>)       <span class="comment"># 属性简写形式 </span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211114140614536.png" alt="image-20211114140614536"></p>
+<h4 id="显示图例"><a href="#显示图例" class="headerlink" title="显示图例"></a>显示图例</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x,y1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">x,y2 = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">9</span>,<span class="number">6</span>,<span class="number">3</span>]</span><br><span class="line">plt.figure(figsize=(<span class="number">20</span>,<span class="number">8</span>))</span><br><span class="line">plt.plot(x,y1,label=<span class="string">&quot;function_1&quot;</span>)    <span class="comment"># 如果只是在这里设置label并不会在图像中显示，因为我们只是修改了图像层</span></span><br><span class="line">plt.legend(loc=<span class="string">&quot;lower right&quot;</span>)               <span class="comment"># 要想显示图例还要在辅助图像层用legend()方法,loc：图例的位置，右上角还是其他地方</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h2 id="一个格里绘制两个图"><a href="#一个格里绘制两个图" class="headerlink" title="一个格里绘制两个图"></a>一个格里绘制两个图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.plot(x,y1,color=<span class="string">&quot;red&quot;</span>,linestyle=<span class="string">&quot;--&quot;</span>,label=<span class="string">&quot;line 1&quot;</span>)     <span class="comment"># 修改图线属性，颜色，粗细等等</span></span><br><span class="line">plt.plot(x,y2,label=<span class="string">&quot;line 2&quot;</span>)</span><br><span class="line">plt.legend(loc=<span class="string">&quot;best&quot;</span>)         </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211114141007028.png" alt="image-20211114141007028"></p>
+<h2 id="多绘图区-绘制多个图"><a href="#多绘图区-绘制多个图" class="headerlink" title="多绘图区,绘制多个图"></a>多绘图区,绘制多个图</h2><h4 id="面向对象的画图方法"><a href="#面向对象的画图方法" class="headerlink" title="面向对象的画图方法"></a>面向对象的画图方法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">figure,axes = plt.subplots(<span class="number">1</span>,<span class="number">2</span>,figsize=(<span class="number">20</span>,<span class="number">8</span>))    <span class="comment"># 返回figure画布,和axes绘图区，注意是subplots而不是subplot</span></span><br><span class="line">axes[<span class="number">0</span>].plot(x,y1,color=<span class="string">&quot;red&quot;</span>)          <span class="comment"># 表示第一个绘图区</span></span><br><span class="line">axes[<span class="number">0</span>].set_xticks(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">1</span>))       <span class="comment"># 和正常的方法相似又有点区别</span></span><br><span class="line"></span><br><span class="line">axes[<span class="number">1</span>].plot(x,y2,label=<span class="string">&quot;function_2&quot;</span>)</span><br><span class="line">axes[<span class="number">1</span>].set_xlabel(<span class="string">&quot;fig title&quot;</span>)         <span class="comment"># 显示标题</span></span><br><span class="line">axes[<span class="number">1</span>].legend()                        <span class="comment"># 函数曲线图例，需要注意的是每个图的辅助层并不是同一个，也需要用对象的方式指定是哪个图的legend</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211114141024917.png" alt="image-20211114141024917"></p>
+<h2 id="绘制散点图-scatter"><a href="#绘制散点图-scatter" class="headerlink" title="绘制散点图 scatter"></a>绘制散点图 scatter</h2><h4 id="绘制简单的散点图"><a href="#绘制简单的散点图" class="headerlink" title="绘制简单的散点图"></a>绘制简单的散点图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">10</span> * np.random.rand(<span class="number">30</span>,<span class="number">1</span>)</span><br><span class="line">y = np.linspace(<span class="number">1</span>,<span class="number">10</span>,<span class="number">30</span>)</span><br><span class="line">plt.figure()</span><br><span class="line">plt.scatter(x,y)</span><br><span class="line"><span class="comment"># 散点图还可以用：plt.plot(kind=&quot;scatter&quot;,alpha=0.4,x=&quot;&quot;,y=&quot;&quot;)</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211114141249839.png" alt="image-20211114141249839"></p>
+<h4 id="漂亮的的散点图"><a href="#漂亮的的散点图" class="headerlink" title="漂亮的的散点图"></a>漂亮的的散点图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = (<span class="number">30</span>*np.random.rand(<span class="number">30</span>))**<span class="number">2</span>       <span class="comment"># s参数：设置每个点的大小也就是面积，大小值是上面定义的s，默认是20</span></span><br><span class="line">c = np.random.rand(<span class="number">30</span>)               <span class="comment"># c参数：设置点的颜色</span></span><br><span class="line">plt.scatter(x,y,s=s,c=c,alpha=<span class="number">0.5</span>)   <span class="comment"># 设置透明度</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211114141301120.png" alt="image-20211114141301120"></p>
+<h4 id="设置每个点的形状"><a href="#设置每个点的形状" class="headerlink" title="设置每个点的形状"></a>设置每个点的形状</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = (<span class="number">30</span>*np.random.rand(<span class="number">30</span>))**<span class="number">2</span>       </span><br><span class="line">c = np.random.rand(<span class="number">30</span>)               </span><br><span class="line">plt.scatter(x,y,s=s,c=c,alpha=<span class="number">0.5</span>,marker=<span class="string">&quot;+&quot;</span>)   <span class="comment"># </span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211114141525240.png" alt="image-20211114141525240"></p>
+<h4 id="一张图绘制两组数据的散点图"><a href="#一张图绘制两组数据的散点图" class="headerlink" title="一张图绘制两组数据的散点图"></a>一张图绘制两组数据的散点图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.scatter(x,y,alpha=<span class="number">0.5</span>,marker=<span class="string">&quot;+&quot;</span>,label=<span class="string">&quot;scat1&quot;</span>)   <span class="comment"># </span></span><br><span class="line">plt.scatter(x,y*<span class="number">3</span>,alpha=<span class="number">0.5</span>,marker=<span class="string">&quot;^&quot;</span>,label=<span class="string">&quot;scat2&quot;</span>)   <span class="comment"># </span></span><br><span class="line">plt.legend()</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211114141647415.png" alt="image-20211114141647415"></p>
+<h3 id="柱状图-bar"><a href="#柱状图-bar" class="headerlink" title="柱状图    bar"></a>柱状图    bar</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="string">&quot;北大&quot;</span>,<span class="string">&quot;清华&quot;</span>,<span class="string">&quot;中科大&quot;</span>,<span class="string">&quot;南大&quot;</span>,<span class="string">&quot;浙大&quot;</span>,<span class="string">&quot;哈工大&quot;</span>]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">plt.figure(figsize=(<span class="number">20</span>,<span class="number">8</span>))</span><br><span class="line">plt.bar(x,y,color=[<span class="string">&quot;r&quot;</span>,<span class="string">&quot;blue&quot;</span>,<span class="string">&quot;green&quot;</span>],width=<span class="number">0.2</span>)    <span class="comment"># 设置颜色的时候，如果没有和数量对上的话，就会再循环重复用之前的颜色</span></span><br><span class="line">plt.title(<span class="string">&quot;Test fig&quot;</span>)</span><br><span class="line">plt.grid(alpha=<span class="number">0.4</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211114141718791.png" alt="image-20211114141718791"></p>
+<h3 id="水平柱状图-barh"><a href="#水平柱状图-barh" class="headerlink" title="水平柱状图       barh"></a>水平柱状图       barh</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = np.arange(<span class="number">1</span>,<span class="number">8</span>)</span><br><span class="line">y = np.random.randn(<span class="number">7</span>)*<span class="number">10</span></span><br><span class="line">plt.barh(x,y)</span><br><span class="line">plt.yticks(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">8</span>),[<span class="string">&quot;bar&#123;&#125;&quot;</span>.<span class="built_in">format</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">8</span>)])</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211114145906514.png" alt="image-20211114145906514"></p>
+<h3 id="直方图-hist-和柱状图很像"><a href="#直方图-hist-和柱状图很像" class="headerlink" title="直方图     hist      和柱状图很像"></a>直方图     hist      和柱状图很像</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">y = np.random.randn(<span class="number">10000</span>) </span><br><span class="line">plt.figure()</span><br><span class="line">plt.hist(y,bins=<span class="number">30</span>,edgecolor=<span class="string">&quot;black&quot;</span>)  </span><br><span class="line">   </span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">y:必选参数，绘图数据</span></span><br><span class="line"><span class="string">bins:直方图的长条形数目，可选项，默认为10</span></span><br><span class="line"><span class="string">normed:是否将得到的直方图向量归一化，可选项，默认为0，代表不归一化，显示频数。normed=1，表示归一化，显示频率。</span></span><br><span class="line"><span class="string">facecolor:长条形的颜色</span></span><br><span class="line"><span class="string">edgecolor:长条形边框的颜色</span></span><br><span class="line"><span class="string">alpha:透明度</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211114150816363.png" alt="image-20211114150816363"></p>
+<h3 id="饼图-pie"><a href="#饼图-pie" class="headerlink" title="饼图  pie"></a>饼图  pie</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">plt.figure(figsize=(<span class="number">20</span>,<span class="number">8</span>),facecolor=<span class="string">&quot;white&quot;</span>)    <span class="comment"># 设置底色</span></span><br><span class="line">plt.pie(x,labels=[<span class="string">&quot;part a&quot;</span>,<span class="string">&quot;part b&quot;</span>,<span class="string">&quot;part c&quot;</span>,<span class="string">&quot;part d&quot;</span>,<span class="string">&quot;part e&quot;</span>])     <span class="comment"># </span></span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">explode：设置各部分突出</span></span><br><span class="line"><span class="string">label:设置各部分标签</span></span><br><span class="line"><span class="string">labeldistance:设置标签文本距圆心位置，1.1表示1.1倍半径</span></span><br><span class="line"><span class="string">autopct：设置圆里面文本</span></span><br><span class="line"><span class="string">shadow：设置是否有阴影</span></span><br><span class="line"><span class="string">startangle：起始角度，默认从0开始逆时针转</span></span><br><span class="line"><span class="string">pctdistance：设置圆内文本距圆心距离</span></span><br><span class="line"><span class="string">返回值</span></span><br><span class="line"><span class="string">l_text：圆内部文本，matplotlib.text.Text object</span></span><br><span class="line"><span class="string">p_text：圆外部文本</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ZERONE\AppData\Roaming\Typora\typora-user-images\image-20211114150846304.png" alt="image-20211114150846304"></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：Matplotlib教程</li>
+        <li>本文作者：Luo zerone</li>
+        <li>创建时间：2022-05-09 22:32:23</li>
+        <li>
+            本文链接：http://zer-one.github.io/2022/05/09/matplotlib使用/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/Matplotlib/">#Matplotlib</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/05/09/numpy/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Numpy教程</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/05/09/%E8%B7%A8%E4%B8%BB%E6%9C%BA%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">跨主机连接</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Luo zerone</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E7%BB%98%E5%88%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.</span> <span class="nav-text">图像绘制的基本步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%8A%9F%E8%83%BD"><span class="nav-number">2.</span> <span class="nav-text">基础功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E7%9A%84%E8%BE%85%E5%8A%A9%E4%BF%A1%E6%81%AF"><span class="nav-number">2.0.1.</span> <span class="nav-text">图像的辅助信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E5%9B%BE%E4%BE%8B"><span class="nav-number">2.0.2.</span> <span class="nav-text">显示图例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E6%A0%BC%E9%87%8C%E7%BB%98%E5%88%B6%E4%B8%A4%E4%B8%AA%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">一个格里绘制两个图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%BB%98%E5%9B%BE%E5%8C%BA-%E7%BB%98%E5%88%B6%E5%A4%9A%E4%B8%AA%E5%9B%BE"><span class="nav-number">4.</span> <span class="nav-text">多绘图区,绘制多个图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%94%BB%E5%9B%BE%E6%96%B9%E6%B3%95"><span class="nav-number">4.0.1.</span> <span class="nav-text">面向对象的画图方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E6%95%A3%E7%82%B9%E5%9B%BE-scatter"><span class="nav-number">5.</span> <span class="nav-text">绘制散点图 scatter</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="nav-number">5.0.1.</span> <span class="nav-text">绘制简单的散点图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%BC%82%E4%BA%AE%E7%9A%84%E7%9A%84%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="nav-number">5.0.2.</span> <span class="nav-text">漂亮的的散点图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E6%AF%8F%E4%B8%AA%E7%82%B9%E7%9A%84%E5%BD%A2%E7%8A%B6"><span class="nav-number">5.0.3.</span> <span class="nav-text">设置每个点的形状</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%BB%98%E5%88%B6%E4%B8%A4%E7%BB%84%E6%95%B0%E6%8D%AE%E7%9A%84%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="nav-number">5.0.4.</span> <span class="nav-text">一张图绘制两组数据的散点图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%B1%E7%8A%B6%E5%9B%BE-bar"><span class="nav-number">5.1.</span> <span class="nav-text">柱状图    bar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E6%9F%B1%E7%8A%B6%E5%9B%BE-barh"><span class="nav-number">5.2.</span> <span class="nav-text">水平柱状图       barh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE-hist-%E5%92%8C%E6%9F%B1%E7%8A%B6%E5%9B%BE%E5%BE%88%E5%83%8F"><span class="nav-number">5.3.</span> <span class="nav-text">直方图     hist      和柱状图很像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A5%BC%E5%9B%BE-pie"><span class="nav-number">5.4.</span> <span class="nav-text">饼图  pie</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>

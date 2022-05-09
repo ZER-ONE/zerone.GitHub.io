@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Luo zerone">
+    
+    <title>
+        
+            Numpy教程 |
+        
+        Fly your mind-随风而行
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/icon.ico">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"zer-one.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/icon.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Zeal without knowledge is fire without light"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Fly your mind-随风而行
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Numpy教程</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Luo zerone</span>
+                        
+                            <span class="author-label">Engineer</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-05-09 22:32:28</span>
+        <span class="mobile">2022-05-09 22:32</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Numpy/">Numpy</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.6k 字</span>
+        </span>
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>这里只是把一些Numpy的基本的使用语法记录下来了，并没有详细的解释啥的，仅仅作为笔记使用，之后有时间会慢慢修改补充的。</p>
+<center style="font-size:40px;font-weight:bold">Numpy</center>
+
+<ul>
+<li>Numpy是一种高效运算工具</li>
+<li>Numpy的基本数据结构是ndarray，其实就是数组:smile:</li>
+<li>ndarray 只存储同一类型的数据，也就是说你并不能在一个变量中既存储字符有存数字，这点和数组一样</li>
+<li>Numpy专门针对ndarray进行了优化，所以比python的list操作更快，底层是用C语言编写，内部解除了GIL（全局解释器锁）</li>
+</ul>
+<hr>
+<h3 id="定义ndarray数组"><a href="#定义ndarray数组" class="headerlink" title="定义ndarray数组"></a>定义ndarray数组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">ndarray = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]])    </span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b = [ [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] , [<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ]</span><br><span class="line">c = [ [ [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] , [<span class="number">9</span>,<span class="number">7</span>,<span class="number">5</span>] ], [ [<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>] , [<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>] ] ]</span><br><span class="line">np.array(a)  <span class="comment"># 一维数组</span></span><br><span class="line">np.array(b)  <span class="comment"># 二维数组  两行三列</span></span><br><span class="line">np.array(c)  <span class="comment"># 三维数组  两页两行三列</span></span><br><span class="line"></span><br><span class="line">mat = np.array((<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>))              </span><br><span class="line">mat.shape     <span class="comment"># mat其实是一维列数组，只是看起来像是行数组，使用shape就可以发现mat的行数是5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="ndarray的复制"><a href="#ndarray的复制" class="headerlink" title="ndarray的复制"></a>ndarray的复制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">np.array()        <span class="comment"># 深拷贝</span></span><br><span class="line">np.asarray()      <span class="comment"># 浅拷贝   当原数据改变时，此数据也会变</span></span><br><span class="line">np.copy()         <span class="comment"># 深拷贝</span></span><br><span class="line"></span><br><span class="line">data = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">x = np.array(data)</span><br><span class="line">y = np.asarray(data)</span><br><span class="line">z = np.copy(data)      <span class="comment"># z = data.copy()</span></span><br><span class="line"><span class="comment"># 当修改data数据后，array和copy并不会随着data变化，而asarry却会随着data同时变化，可以理解为asarry复制的是data存放的地址，而array和copy是复制的数值</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong>当修改data中的数据后，x，z都不变，而y却发生了改变</p>
+<p><img src="https://raw.githubusercontent.com/ZER-ONE/BlogImages/master/image-20211116223854642.png" alt="image-20211116223854642"></p>
+<h3 id="常用属性"><a href="#常用属性" class="headerlink" title="常用属性"></a>常用属性</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ndarray.shape    <span class="comment"># ndarray类型的数组的行列数</span></span><br><span class="line">ndarray.size     <span class="comment"># 数组的总的元素个数</span></span><br><span class="line">ndarray.ndim	 <span class="comment"># 数组维数</span></span><br><span class="line">ndarray.dtype    <span class="comment"># ndarray值的类型  也可以在ndarray定义的时候指定数据类型</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="生成特殊的数组"><a href="#生成特殊的数组" class="headerlink" title="生成特殊的数组"></a>生成特殊的数组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.ones((<span class="number">3</span>,<span class="number">4</span>))              <span class="comment"># 生成3行4列，元素都为1的数组</span></span><br><span class="line">np.zeros([<span class="number">3</span>,<span class="number">4</span>],dtype=<span class="string">&quot;int64&quot;</span>)     <span class="comment"># 生成3行4列，元素都为0的数组,   数据类型是int64</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data1 = np.random.rand(<span class="number">100</span>,<span class="number">1</span>)    <span class="comment"># 参数是行,列 返回100行1列的数组，单个元素取值0-1之间，且满足均匀分布</span></span><br><span class="line">data2 = np.random.randn(<span class="number">10</span>,<span class="number">1</span>)   <span class="comment"># 参数是行，列 返回几行几列的数组,数据满足正态分布</span></span><br><span class="line">data3 = np.random.randint(<span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>)   <span class="comment"># 返回100个数，每个数都是1-9之间的整数,如果没有第三个参数就只返回一个值</span></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;需要注意的是，如果括号中参数数量，导致结果的区别&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 如果无参数，则返回一个常数值，如果是一个参数，则返回一个只有一个值的列表，如果是两个参数，则返回的是二维数组</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成固定范围的随机的一维数组</span></span><br><span class="line">np.linspace(<span class="number">1</span>,<span class="number">10</span>,<span class="number">20</span>)    <span class="comment"># 生成1-10内20个等间距的数</span></span><br><span class="line">np.arange(<span class="number">1</span>,<span class="number">10</span>,<span class="number">2</span>)       <span class="comment"># 和range一个作用，起始位置，终止位置，步长</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># para1：最小值；para2：最大值，para3：取值数量   所生成的100个数据服从均匀分布</span></span><br><span class="line">np.random.uniform(<span class="number">1</span>,<span class="number">3</span>,<span class="number">100</span>)   </span><br><span class="line"><span class="comment"># para1：均值；para2：方差,para3:取值数量   所生成的3行4列的数据服从正态分布</span></span><br><span class="line">np.random.normal(<span class="number">0</span>,<span class="number">1</span>,(<span class="number">3</span>,<span class="number">4</span>))     </span><br></pre></td></tr></table></figure>
+
+<h3 id="索引、切片"><a href="#索引、切片" class="headerlink" title="索引、切片"></a>索引、切片</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = np.random.normal(loc=<span class="number">0</span>,scale=<span class="number">1</span>,size=[<span class="number">8</span>,<span class="number">10</span>])</span><br><span class="line">data[<span class="number">0</span>,<span class="number">0</span>:<span class="number">3</span>]       <span class="comment"># 第0行的第0列，第1列，第2列数据</span></span><br><span class="line">data[:,:<span class="number">3</span>]       <span class="comment"># 所有行的前三列</span></span><br><span class="line">data[<span class="number">1</span>,<span class="number">1</span>]        <span class="comment"># 第1行第1列数据     和数组的索引方式一样</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改ndarray的形状"><a href="#修改ndarray的形状" class="headerlink" title="修改ndarray的形状"></a>修改ndarray的形状</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data.reshape(<span class="number">10</span>,<span class="number">8</span>)  <span class="comment"># 将8行10列的数据 转成了10行8列的数据，返回新的数据，并不会修改原始数据，如果将参数设为-1，那么</span></span><br><span class="line">data.resize(<span class="number">10</span>,<span class="number">8</span>)   <span class="comment"># 将8行10列的数据 转成了10行8列的数据，不返回值，在原始的数据上进行修改</span></span><br><span class="line">data.T    <span class="comment"># 矩阵转置</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="ndarray数据类型修改"><a href="#ndarray数据类型修改" class="headerlink" title="ndarray数据类型修改"></a>ndarray数据类型修改</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.astype(<span class="string">&quot;int32&quot;</span>)    <span class="comment"># 改成int型数据data.tostring()			# 转成字符串型数据</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="ndarray去重"><a href="#ndarray去重" class="headerlink" title="ndarray去重"></a>ndarray去重</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.unique(data)     <span class="comment"># 删除所有重复的数据，并将未被删除的的数据往前填充空位 </span></span><br><span class="line"><span class="comment"># set方法也能去重，但是只能用于一维数组</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="ndarray运算"><a href="#ndarray运算" class="headerlink" title="ndarray运算"></a>ndarray运算</h3><p><strong>逻辑运算</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data = np.random.normal(<span class="number">0</span>,<span class="number">1</span>,(<span class="number">8</span>,<span class="number">10</span>))         </span><br><span class="line"><span class="comment"># 生成数据</span></span><br><span class="line"><span class="comment"># 逻辑判断，如果数值大于某个值判为true，小于就判为false</span></span><br><span class="line">data = data&gt;<span class="number">0.5</span>           <span class="comment"># 判断函数</span></span><br><span class="line">np.<span class="built_in">all</span>(data)       <span class="comment"># 当所有数据都为True时，才返回True  如果数据中只要有一个false就返回false</span></span><br><span class="line">np.<span class="built_in">any</span>(data)       <span class="comment"># 也可以data.any();只要有一个True就返回true，全是false才会返回false</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:/Users/ZERONE/AppData/Roaming/Typora/typora-user-images/image-20211116225934077.png" alt="image-20211116225934077"></p>
+<p><img src="https://raw.githubusercontent.com/ZER-ONE/BlogImages/master/image-20211116230202529.png" alt="image-20211116230202529"></p>
+<p><strong>布尔索引</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 布尔索引，找出data中所有大于0.5的数据data[data&gt;0.5]# 找出data中所有大于0.5的数据，令它们都为2</span></span><br><span class="line">data[data&gt;<span class="number">0.5</span>]=<span class="number">2</span> </span><br></pre></td></tr></table></figure>
+
+<p><strong>三元运算符</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.where(data&gt;<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>)       </span><br><span class="line"><span class="comment"># parameter1: 判断条件    parameter2：满足判断条件后执行的语句    parameter3：不满足判断条件后执行的语句</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>统计运算</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 统计运算    最小值，max,mean,median</span></span><br><span class="line">data = np.random.normal(<span class="number">0</span>,<span class="number">1</span>,(<span class="number">8</span>,<span class="number">10</span>))np.<span class="built_in">max</span>(data)       <span class="comment"># 或者data.max()  data中的最大值</span></span><br><span class="line">data.<span class="built_in">max</span>(axis=<span class="number">1</span>)    <span class="comment"># axis修改轴，每列的最大值</span></span><br><span class="line">data.<span class="built_in">max</span>(axis=<span class="number">0</span>)     <span class="comment"># 每行的最大值</span></span><br><span class="line">np.mean(data,axis=<span class="number">1</span>)  <span class="comment"># data的均值</span></span><br><span class="line">np.argmax(data)        <span class="comment"># 返回最大值所在的位置</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>判断函数</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.<span class="built_in">all</span>(data)       <span class="comment"># 当所有数据都为True时，才返回True   如果数据中只要有一个false就返回false</span></span><br><span class="line">np.<span class="built_in">any</span>(data)       <span class="comment"># 只要有一个True就返回true，全是false才会返回false</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>数组与数的运算</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data +<span class="number">1</span>      <span class="comment"># data数组中所有的元素 +1</span></span><br><span class="line">data*<span class="number">2</span>       <span class="comment"># data数组中所有的元素 *2</span></span><br><span class="line">data/<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>广播机制</strong></p>
+<p>广播机制其实不难，不过看视频可能更加详细、形象    <a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV12441197w6" >B站视频链接<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data +<span class="number">1</span>      <span class="comment"># data数组中所有的元素 +1</span></span><br><span class="line">data*<span class="number">2</span>       <span class="comment"># data数组中所有的元素 *2</span></span><br><span class="line">data/<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="矩阵运算"><a href="#矩阵运算" class="headerlink" title="矩阵运算"></a>矩阵运算</h3><p>​	两种方法存储矩阵</p>
+<p>​	1.ndarray</p>
+<p>​	 2.matrix</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mat([<span class="number">80</span>,<span class="number">86</span>])    <span class="comment"># matrix存储</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="矩阵运算-1"><a href="#矩阵运算-1" class="headerlink" title="矩阵运算"></a>矩阵运算</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = np.matrix([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]])b = np.matrix([[<span class="number">1</span>],[<span class="number">2</span>],[<span class="number">3</span>],[<span class="number">4</span>]])a*ba+ba= [[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">0</span>,<span class="number">1</span>]]inv = np.linalg.inv(a)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/ZER-ONE/BlogImages/master/image-20211116225616989.png" alt="image-20211116225616989"></p>
+<h3 id="矩阵-x2F-数组合并"><a href="#矩阵-x2F-数组合并" class="headerlink" title="矩阵&#x2F;数组合并"></a>矩阵&#x2F;数组合并</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]])</span><br><span class="line">b = np.array([[<span class="number">0</span>,<span class="number">9</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>]])</span><br><span class="line">data1 = np.hstack((a,b))       <span class="comment"># 水平合并   h:horizon</span></span><br><span class="line">data2 = np.vstack((a,b))       <span class="comment"># 垂直合并   v:vertical</span></span><br><span class="line">x = np.c_[a,b]    <span class="comment"># 矩阵左右进行堆叠   hstack   []而不是()</span></span><br><span class="line">y = np.r_[a,b]    <span class="comment"># 矩阵上下进行堆叠   vstack</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/ZER-ONE/BlogImages/master/image-20211116224930113.png" alt="image-20211116224930113"></p>
+<p><img src="https://raw.githubusercontent.com/ZER-ONE/BlogImages/master/image-20211116225101382.png" alt="image-20211116225101382"></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：Numpy教程</li>
+        <li>本文作者：Luo zerone</li>
+        <li>创建时间：2022-05-09 22:32:28</li>
+        <li>
+            本文链接：http://zer-one.github.io/2022/05/09/numpy/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/Numpy/">#Numpy</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/05/09/netstat_route_tracert%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">netstat命令使用</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/05/09/matplotlib%E4%BD%BF%E7%94%A8/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Matplotlib教程</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Luo zerone</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89ndarray%E6%95%B0%E7%BB%84"><span class="nav-number">1.0.1.</span> <span class="nav-text">定义ndarray数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ndarray%E7%9A%84%E5%A4%8D%E5%88%B6"><span class="nav-number">1.0.2.</span> <span class="nav-text">ndarray的复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7"><span class="nav-number">1.0.3.</span> <span class="nav-text">常用属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E7%89%B9%E6%AE%8A%E7%9A%84%E6%95%B0%E7%BB%84"><span class="nav-number">1.0.4.</span> <span class="nav-text">生成特殊的数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95%E3%80%81%E5%88%87%E7%89%87"><span class="nav-number">1.0.5.</span> <span class="nav-text">索引、切片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9ndarray%E7%9A%84%E5%BD%A2%E7%8A%B6"><span class="nav-number">1.0.6.</span> <span class="nav-text">修改ndarray的形状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ndarray%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BF%AE%E6%94%B9"><span class="nav-number">1.0.7.</span> <span class="nav-text">ndarray数据类型修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ndarray%E5%8E%BB%E9%87%8D"><span class="nav-number">1.0.8.</span> <span class="nav-text">ndarray去重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ndarray%E8%BF%90%E7%AE%97"><span class="nav-number">1.0.9.</span> <span class="nav-text">ndarray运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97"><span class="nav-number">1.0.10.</span> <span class="nav-text">矩阵运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97-1"><span class="nav-number">1.0.11.</span> <span class="nav-text">矩阵运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5-x2F-%E6%95%B0%E7%BB%84%E5%90%88%E5%B9%B6"><span class="nav-number">1.0.12.</span> <span class="nav-text">矩阵&#x2F;数组合并</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>
