@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Luo zerone">
+    
+    <title>
+        
+            DOS命令基础 |
+        
+        Fly your mind-随风而行
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/icon.ico">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"zer-one.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/icon.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Zeal without knowledge is fire without light"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Fly your mind-随风而行
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">DOS命令基础</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Luo zerone</span>
+                        
+                            <span class="author-label">菜菜子</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-05-10 08:13:34</span>
+        <span class="mobile">2022-05-10 08:13</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/DOS/">DOS</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Windows/">Windows</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.7k 字</span>
+        </span>
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="DOS：批处理命令"><a href="#DOS：批处理命令" class="headerlink" title="DOS：批处理命令"></a>DOS：批处理命令</h1><p>batch file programming:批处理既是程序也是一种脚本</p>
+<h3 id="内部命令、外部命令："><a href="#内部命令、外部命令：" class="headerlink" title="内部命令、外部命令："></a>内部命令、外部命令：</h3><p><img src="D:\Typora\pics\image-20211222221825547.png" alt="image-20211222221825547"></p>
+<p>当你输入的命令无法识别的时候就会报错。</p>
+<p>什么是内部命令呢？内部命令就是DOS自有的命令，比如 ipconfig，ping等</p>
+<p>而外部命令就是 python，Java 等应用程序自己的命令</p>
+<h3 id="DOS命令基本格式"><a href="#DOS命令基本格式" class="headerlink" title="DOS命令基本格式"></a>DOS命令基本格式</h3><p>&#x3D;&#x3D;主命令&#x3D;&#x3D; + &#x3D;&#x3D;子命令&#x3D;&#x3D; + &#x3D;&#x3D;参数&#x3D;&#x3D;</p>
+<p>以shutdown为例</p>
+<p><img src="D:\Typora\pics\image-20220414134849873.png" alt="image-20220414134849873"></p>
+<p>或者：</p>
+<p>shutdown [ -i | -l | -s | -r | -a | -p | -h | -e]  [-f] [-m \\Computer]  [-t  XXX]  [-d  [p|u:] XX:YY [-c “comment”]]</p>
+<p><code>这里的方括号和其他的一些符号都是提示性的，在实际的命令中并不用键入</code></p>
+<p>shutdown是主命令                         <kbd>-</kbd>和<kbd>/</kbd>等价</p>
+<p>[ ]  方括号是可选参数，即你可以有也可以没有，| 是你最多只能在这些参数中选一个</p>
+<p>尖括号 &lt; &gt; 表示可选参数下的子参数</p>
+<p>大括号 {}  表示其中的项必选一项</p>
+<p>省略号 …   表示可重复输入的项</p>
+<h3 id="命令帮助信息"><a href="#命令帮助信息" class="headerlink" title="命令帮助信息"></a>命令帮助信息</h3><blockquote>
+<p>&#x2F;?</p>
+<p>&#x2F;help    -help</p>
+</blockquote>
+<p>获得命令的帮助信息，类似于Linux中的 man，help</p>
+<p>直接输入命令而不加选项和参数也可以显示命令帮助信息</p>
+<p><img src="D:\Typora\pics\image-20220414130502085.png" alt="image-20220414130502085"></p>
+<blockquote>
+<p>@echo  off：关闭盘符</p>
+</blockquote>
+<p>当我们键入  echo hello world时，<img src="D:\Typora\pics\image-20211222220742631.png" alt="image-20211222220742631"></p>
+<p>会打印盘符，如果我们不想要输出这个信息，就可以使用这个命令。</p>
+<p><img src="D:\Typora\pics\image-20211222220918992.png" alt="image-20211222220918992"></p>
+<p>如上图所示，使用了该指令后，输入echo hello world，会打印hello world  而不会输出盘符信息。</p>
+<blockquote>
+<p><strong>echo：</strong>输出</p>
+</blockquote>
+<blockquote>
+<p><strong>pause：</strong>就是c语言中的system(“pause”)，保持等待输入</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20211222221312073.png" alt="image-20211222221312073"></p>
+<blockquote>
+<p><strong>cls：</strong>清屏 clear screen</p>
+</blockquote>
+<blockquote>
+<p>type：</p>
+</blockquote>
+<p>​		查看文件内容</p>
+<h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><blockquote>
+<p>set  &#x2F;a  [参数 ]</p>
+</blockquote>
+<p>​	&#x2F;a 表示要进行算术运算，方括号所代表的是带运算的式子</p>
+<p>比如说：</p>
+<p><img src="D:\Typora\pics\image-20220414032145428.png" alt="image-20220414032145428"></p>
+<p>设置一个变量var：</p>
+<p><img src="D:\Typora\pics\image-20220414032416995.png" alt="image-20220414032416995"></p>
+<p>输出变量值：</p>
+<p>echo  %var%：输出变量var的值，并不能识别出单独var是一个变量，所以加%</p>
+<p><img src="D:\Typora\pics\image-20220414032505956.png" alt="image-20220414032505956"></p>
+<h3 id="重定向运算"><a href="#重定向运算" class="headerlink" title="重定向运算"></a>重定向运算</h3><p>将数据或结果移交给下一个命令或文件中</p>
+<blockquote>
+<ol>
+<li>​    &gt;   重定向</li>
+</ol>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220414033336167.png" alt="image-20220414033336167"></p>
+<p><img src="D:\Typora\pics\image-20220414033354528.png" alt="image-20220414033354528"></p>
+<blockquote>
+<ol start="2">
+<li>&gt;&gt;   重定向    和上一个的区别在于，本命令会在文件的尾部叠加输入，二单个&gt;会导致输入把初始的文件内容覆盖</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>&lt;  和第一个作用一样，区别在于数据流的方向上，a &gt; b :是把a的内容覆盖b  a&gt;b:b内容覆盖a</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>&lt;&lt;</li>
+</ol>
+</blockquote>
+<h3 id="多命令运算"><a href="#多命令运算" class="headerlink" title="多命令运算"></a>多命令运算</h3><blockquote>
+<p>&amp;&amp;    与的作用</p>
+</blockquote>
+<p>可以同时使用两个命令，需要注意的是这个命令符有短路作用，即第一个命令错的时候，第二个就不会执行了</p>
+<p><img src="D:\Typora\pics\image-20220414034410989.png" alt="image-20220414034410989"></p>
+<p>在这里两个命令都执行了</p>
+<blockquote>
+<p>||   或的作用</p>
+</blockquote>
+<p>同时使用两个命令，即使第一个命令为假，但还是会执行第二个命令；但是如果第一个命令就为真的话就不会执行第二个命令，断路作用</p>
+<p><img src="D:\Typora\pics\image-20220414034457576.png" alt="image-20220414034457576"></p>
+<p>从图中可以看出，第一个命令有问题，但是第二个命令却执行了</p>
+<p><img src="D:\Typora\pics\image-20220414124411919.png" alt="image-20220414124411919"></p>
+<p>从图中可以看出二者的区别，第一个“与”中echo命令是有问题的，所以没有执行后面的type命令，而”或“命令中即使前一个”echo“有问题，但依然执行了后面的”type“命令</p>
+<h3 id="管道命令"><a href="#管道命令" class="headerlink" title="管道命令"></a>管道命令</h3><blockquote>
+<p>|    </p>
+</blockquote>
+<p>注意这里是一竖，  例如 A|B   将A命令的输出作为B命令的输入</p>
+<p><img src="D:\Typora\pics\image-20220414130026782.png" alt="image-20220414130026782"></p>
+<p>第一个命令得到的输出，然后从这些输出作为第二个命令的输入，find是找出这些输入中是ESTABLISHED的项</p>
+<h3 id="bat文件参数传递"><a href="#bat文件参数传递" class="headerlink" title="bat文件参数传递"></a>bat文件参数传递</h3><blockquote>
+<p>%</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220414150004203.png" alt="image-20220414150004203"></p>
+<p>在bat文件中，这个 % 就代表了是参数变量，当我们运行这个bat文件并在后面协商参数，就会把这些参数传入到这些变量并替代。需要注意的是，变量是有顺序的，如图所示，我们先传递的“hello”替代了%1，而%1再%2的后面，所以说他会晚于%1输出结果。</p>
+<p><img src="D:\Typora\pics\image-20220414150101554.png" alt="image-20220414150101554"></p>
+<h3 id="注释符"><a href="#注释符" class="headerlink" title="注释符"></a>注释符</h3><blockquote>
+<p>rem + 注释内容</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220414151953418.png" alt="image-20220414151953418"></p>
+<h3 id="调用其他bat文件"><a href="#调用其他bat文件" class="headerlink" title="调用其他bat文件"></a>调用其他bat文件</h3><blockquote>
+<p>call</p>
+</blockquote>
+<p>直接命令 + 要调用的bat文件就行</p>
+<p><img src="D:\Typora\pics\image-20220414162839874.png" alt="image-20220414162839874"></p>
+<p>不过虽然可以调用其他的bat文件，但是却无法向其传递参数</p>
+<p>  <img src="D:\Typora\pics\image-20220414162805825.png" alt="image-20220414162805825"></p>
+<p> 这个是无法给2.bat传递参数的</p>
+<h3 id="任务查看"><a href="#任务查看" class="headerlink" title="任务查看"></a>任务查看</h3><blockquote>
+<p>tasklist</p>
+</blockquote>
+<p>显示当前主机或者远程主机正在运行的任务列表</p>
+<p>1.查看远程主机的任务列表</p>
+<p>当我们知道远程主机的IP地址，就可以查看该主机上的任务列表了，但前提是需要身份认证的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tasklist  /S  192.168.1.1  /U [username]   /P  [password]</span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\Typora\pics\image-20220415012533099.png" alt="image-20220415012533099"></p>
+<h3 id="任务关闭"><a href="#任务关闭" class="headerlink" title="任务关闭"></a>任务关闭</h3><blockquote>
+<p>taskkill</p>
+</blockquote>
+<p>关闭某个正在进行的任务</p>
+<h3 id="关机、重启命令"><a href="#关机、重启命令" class="headerlink" title="关机、重启命令"></a>关机、重启命令</h3><blockquote>
+<p>shutdown</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220415014116010.png" alt="image-20220415014116010"></p>
+<h3 id="计划任务命令"><a href="#计划任务命令" class="headerlink" title="计划任务命令"></a>计划任务命令</h3><p>在每天固定指定某个exe文件</p>
+<blockquote>
+<p>at  该命令已在win10中禁用     改成了schtasks</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220415020555887.png" alt="image-20220415020555887"></p>
+<h3 id="批处理环境变量"><a href="#批处理环境变量" class="headerlink" title="批处理环境变量"></a>批处理环境变量</h3><blockquote>
+<p>set</p>
+</blockquote>
+<p>设置变量，同时也可以显示本机当前的环境变量</p>
+<p><img src="D:\Typora\pics\image-20220415095841486.png" alt="image-20220415095841486"></p>
+<p>输出某个环境变量，这个变量要加两个 % 才行</p>
+<p><img src="D:\Typora\pics\image-20220415100001803.png" alt="image-20220415100001803"></p>
+<h3 id="文件处理命令"><a href="#文件处理命令" class="headerlink" title="文件处理命令"></a>文件处理命令</h3><p><strong>目录查看命令</strong></p>
+<blockquote>
+<p>dir</p>
+</blockquote>
+<p>会显示当前路径下的所有目录信息</p>
+<p><img src="D:\Typora\pics\image-20220415101914690.png" alt="image-20220415101914690"></p>
+<p>相关参数：</p>
+<p><img src="D:\Typora\pics\image-20220415101957564.png" alt="image-20220415101957564"></p>
+<h3 id="文件夹结构查看"><a href="#文件夹结构查看" class="headerlink" title="文件夹结构查看"></a>文件夹结构查看</h3><blockquote>
+<p>tree     以树形结构展示本目录</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220506105040751.png" alt="image-20220506105040751"></p>
+<p><strong>新建目录</strong></p>
+<blockquote>
+<p>md   或  mkdir     </p>
+</blockquote>
+<p>​		md  [盘符][路径]</p>
+<p><img src="D:\Typora\pics\image-20220415102139238.png" alt="image-20220415102139238"></p>
+<p>执行这个命令后在当前路径下创建了一个 test 目录</p>
+<p><strong>删除目录</strong></p>
+<blockquote>
+<p>rd  或  rmdir      类似于 rm</p>
+</blockquote>
+<p>​		rd  [盘符][路径]                 但该命令只能删除空目录</p>
+<p><img src="D:\Typora\pics\image-20220415102355405.png" alt="image-20220415102355405"></p>
+<p>执行这条指令后，将删除当前路径下的test目录</p>
+<p><img src="D:\Typora\pics\image-20220415102849604.png" alt="image-20220415102849604"></p>
+<p>因为test目录不为空，如果用该命令删除该目录，会报错，所以 rd 并不能删除非空目录</p>
+<p><strong>切换目录</strong></p>
+<blockquote>
+<p> cd</p>
+</blockquote>
+<p><strong>文件重命名</strong></p>
+<blockquote>
+<p>ren  或   rename</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220415105903304.png" alt="image-20220415105903304"></p>
+<p>将test目录的名称改为test1</p>
+<p><strong>目录复制</strong></p>
+<blockquote>
+<p>copy</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220415110143510.png" alt="image-20220415110143510"></p>
+<p>将1.bat文件复制到test1目录中</p>
+<p><strong>删除文件</strong></p>
+<blockquote>
+<p>del</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220415110715064.png" alt="image-20220415110715064"></p>
+<p>删除当前路径下的1.bat文件</p>
+<p><strong>移动文件或重命名</strong></p>
+<blockquote>
+<p>move</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220415130843031.png" alt="image-20220415130843031"></p>
+<p>将b目录下的1.bat文件移动到当前路径下</p>
+<h3 id="网络命令"><a href="#网络命令" class="headerlink" title="网络命令"></a>网络命令</h3><blockquote>
+<p>net  user</p>
+</blockquote>
+<p>显示用户成员</p>
+<p><img src="D:\Typora\pics\image-20220506014138943.png" alt="image-20220506014138943"></p>
+<blockquote>
+<p>net user 用户名</p>
+</blockquote>
+<p>显示用户的详细信息，如下所示</p>
+<p><img src="D:\Typora\pics\image-20220506014030189.png" alt="image-20220506014030189"></p>
+<blockquote>
+<p>net user username userpwd  &#x2F;add                添加用户</p>
+</blockquote>
+<p>添加一个用户，其用户名为username 密码是userpwd</p>
+<h3 id="用户组操作命令"><a href="#用户组操作命令" class="headerlink" title="用户组操作命令"></a>用户组操作命令</h3><blockquote>
+<p>net   localgroup </p>
+</blockquote>
+<p>显示用户组信息</p>
+<p><img src="D:\Typora\pics\image-20220506110119197.png" alt="image-20220506110119197"></p>
+<blockquote>
+<p>ner localgroup users</p>
+</blockquote>
+<p>显示users用户组的用户成员</p>
+<p><img src="D:\Typora\pics\image-20220506110207316.png" alt="image-20220506110207316"></p>
+<blockquote>
+<p>net localgroup groupName  user &#x2F;add</p>
+</blockquote>
+<p>向groupName用户组添加user用户    将admin用户添加到administrators用户组当中</p>
+<p><img src="D:\Typora\pics\image-20220415132638081.png" alt="image-20220415132638081"></p>
+<blockquote>
+<p>net localgroup groupName &#x2F;add</p>
+</blockquote>
+<p>添加用户组</p>
+<p><img src="D:\Typora\pics\image-20220506110957788.png" alt="image-20220506110957788"></p>
+<p><img src="D:\Typora\pics\image-20220506111258664.png" alt="image-20220506111258664"></p>
+<p>添加后的结果中多了一个testgroup组</p>
+<h3 id="主机连通性"><a href="#主机连通性" class="headerlink" title="主机连通性"></a>主机连通性</h3><blockquote>
+<p>ping</p>
+</blockquote>
+<p>发送ICMP数据包到目标主机</p>
+<h3 id="网络远程连接命令"><a href="#网络远程连接命令" class="headerlink" title="网络远程连接命令"></a>网络远程连接命令</h3><blockquote>
+<p>telnet</p>
+</blockquote>
+<h3 id="条件判断语句"><a href="#条件判断语句" class="headerlink" title="条件判断语句"></a>条件判断语句</h3><blockquote>
+<p>if-else</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220415154002842.png" alt="image-20220415154002842"></p>
+<p>这里的else必须和if在同一行才行，判断条件不用加括号，但是执行语句要加括号</p>
+<p><strong>判断文件是否存在</strong></p>
+<blockquote>
+<p>exist</p>
+</blockquote>
+<p><img src="D:\Typora\pics\image-20220415154640992.png" alt="image-20220415154640992"></p>
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><blockquote>
+<p>for</p>
+</blockquote>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：DOS命令基础</li>
+        <li>本文作者：Luo zerone</li>
+        <li>创建时间：2022-05-10 08:13:34</li>
+        <li>
+            本文链接：http://zer-one.github.io/2022/05/10/DOS命令基础/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/DOS/">#DOS</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/Windows/">#Windows</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/05/09/Win7%E7%A0%B4%E8%A7%A3%E7%B3%BB%E7%BB%9F%E5%AF%86%E7%A0%81/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Windows7下破解电脑密码</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Luo zerone</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DOS%EF%BC%9A%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">DOS：批处理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4%E3%80%81%E5%A4%96%E9%83%A8%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="nav-number">1.0.1.</span> <span class="nav-text">内部命令、外部命令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOS%E5%91%BD%E4%BB%A4%E5%9F%BA%E6%9C%AC%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.0.2.</span> <span class="nav-text">DOS命令基本格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF"><span class="nav-number">1.0.3.</span> <span class="nav-text">命令帮助信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97"><span class="nav-number">1.0.4.</span> <span class="nav-text">算术运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91%E8%BF%90%E7%AE%97"><span class="nav-number">1.0.5.</span> <span class="nav-text">重定向运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%91%BD%E4%BB%A4%E8%BF%90%E7%AE%97"><span class="nav-number">1.0.6.</span> <span class="nav-text">多命令运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%A1%E9%81%93%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.7.</span> <span class="nav-text">管道命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bat%E6%96%87%E4%BB%B6%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="nav-number">1.0.8.</span> <span class="nav-text">bat文件参数传递</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A%E7%AC%A6"><span class="nav-number">1.0.9.</span> <span class="nav-text">注释符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E7%94%A8%E5%85%B6%E4%BB%96bat%E6%96%87%E4%BB%B6"><span class="nav-number">1.0.10.</span> <span class="nav-text">调用其他bat文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1%E6%9F%A5%E7%9C%8B"><span class="nav-number">1.0.11.</span> <span class="nav-text">任务查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1%E5%85%B3%E9%97%AD"><span class="nav-number">1.0.12.</span> <span class="nav-text">任务关闭</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E6%9C%BA%E3%80%81%E9%87%8D%E5%90%AF%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.13.</span> <span class="nav-text">关机、重启命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.14.</span> <span class="nav-text">计划任务命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%B9%E5%A4%84%E7%90%86%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.0.15.</span> <span class="nav-text">批处理环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.16.</span> <span class="nav-text">文件处理命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84%E6%9F%A5%E7%9C%8B"><span class="nav-number">1.0.17.</span> <span class="nav-text">文件夹结构查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.18.</span> <span class="nav-text">网络命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E7%BB%84%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.19.</span> <span class="nav-text">用户组操作命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E6%9C%BA%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="nav-number">1.0.20.</span> <span class="nav-text">主机连通性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.21.</span> <span class="nav-text">网络远程连接命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.0.22.</span> <span class="nav-text">条件判断语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-number">1.0.23.</span> <span class="nav-text">循环结构</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>
